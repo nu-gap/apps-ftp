@@ -32,8 +32,9 @@
 #include <stdio.h>
 
 #import <Foundation/Foundation.h>
+#import "client.h"
 
-@interface ftpclient : NSObject
+@interface ftpclient : client
 {
     id  controller;
     int userDataPort;
@@ -56,8 +57,6 @@
 - (int)authenticate:(char *)user :(char *)pass;
 - (int)initDataConn;
 
-- (NSArray *)getDirList:(char *)path;
-- (NSArray *)getExtDirList:(char *)path;
 
 @end
 
